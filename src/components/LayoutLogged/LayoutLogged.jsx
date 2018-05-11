@@ -23,7 +23,12 @@ class LayoutLogged extends Component {
     render() {
         return (
             <Layout>
-                <Sider width={200} theme="dark">
+                {/* <Sider width={200} theme="dark"> */}
+                <Sider
+                    breakpoint="lg"
+                    collapsedWidth="0"
+                    onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
+                >
                     <div className="logo" style={{ minHeight: '32px', background: 'rgba(255,255,255,.2)', margin: '14px 15px' }} />
                     <Menu
                         mode="inline"
@@ -46,6 +51,13 @@ class LayoutLogged extends Component {
                             <Menu.Item key="3">Tom</Menu.Item>
                             <Menu.Item key="4">Bill</Menu.Item>
                             <Menu.Item key="5">Alex</Menu.Item>
+                            <SubMenu
+                                key="sub10"
+                                title={<span><Icon type="user" /><span>User</span></span>}>
+                                <Menu.Item key="30">Tom</Menu.Item>
+                                <Menu.Item key="40">Bill</Menu.Item>
+                                <Menu.Item key="50">Alex</Menu.Item>
+                            </SubMenu>
                         </SubMenu>
                         <SubMenu
                             key="sub2"

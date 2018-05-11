@@ -1,0 +1,15 @@
+{
+    "sidebar": [
+        {
+            "type": "menu",
+            "label": "Home",
+            "slug": "home",
+            "icon": "pie-chart",
+            "methods": [
+                "add",
+                "edit",
+                "list"
+            ]
+        }
+    ]
+}
